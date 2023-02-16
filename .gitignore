@@ -60,6 +60,14 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+**/migrations/**
+**/.idea/**
+**/*.pyc
+*.log
+*.pot
+**/media
+.vscode/
+/desktop.ini
 
 # Flask stuff:
 instance/
