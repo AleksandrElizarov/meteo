@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'meteo_favicon.png' %}">
     <title>Прогноз погоды</title>
 </head>
 <body>
 
 <div>
-    ПРОГНОЗ ПОГОДЫ
+    ПРОГНОЗ
 </div>
+ 
+<div id="app-5">
+    <label id="app"></label>
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+  </div>
 
+
+
+<script src="{% static 'js/vue.js' %}"></script>
+<script src="{% static 'js/jquery-3.6.3.js' %}"></script>
+<script src="{% static 'js/meteo.js' %}"></script>
 </body>
 </html>
