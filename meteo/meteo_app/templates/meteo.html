@@ -4,18 +4,18 @@
     {% load static %}
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'meteo_favicon.png' %}">
-    <title>Прогноз погоды</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+    <title>Погода в городах мира</title>
 </head>
 <body>
 
 <div>
     ПРОГНОЗ
 </div>
- 
+
 <div id="app-5">
     <label id="app"></label>
-    <p>{{ message }}</p>
+    <p>[[ message ]]</p>
     <button v-on:click="reverseMessage">Перевернуть сообщение</button>
   </div>
 
