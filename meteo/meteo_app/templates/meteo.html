@@ -3,26 +3,28 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_meteo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
     <title>Погода в городах мира</title>
 </head>
-<body>
-
-<div>
-    ПРОГНОЗ
-</div>
-
-<div id="app-5">
-    <label id="app"></label>
-    <p>[[ message ]]</p>
-    <button v-on:click="reverseMessage">Перевернуть сообщение</button>
-  </div>
-
+    <body>
+        <nav class="navbar  " >
+              <div class="container-fluid">
+                <a href="/" class="navbar-brand">Погода в городах мира</a>
+                <form class="d-flex" method="get" action="{% url 'get_meteo' %}">
+                  <input class="form-control me-2" name="city_name" type="search" placeholder="Введите город" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+              </div>
+        </nav>
 
 
-<script src="{% static 'js/vue.js' %}"></script>
-<script src="{% static 'js/jquery-3.6.3.js' %}"></script>
-<script src="{% static 'js/meteo.js' %}"></script>
-</body>
+
+
+    <script src="{% static 'js/vue.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/meteo.js' %}"></script>
+    </body>
 </html>
