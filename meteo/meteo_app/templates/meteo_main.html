@@ -9,20 +9,19 @@
     <title>Погода в городах мира</title>
 </head>
     <body>
-        <nav class="navbar  " >
+        <nav class="navbar" >
               <div class="container-fluid">
                 <a href="/" class="navbar-brand">Погода в городах мира</a>
-                <form class="d-flex" method="get" action="{% url 'get_meteo' %}">
+                <form class="d-flex" method="get" action="{% url 'view_meteo_page' %}">
                   <input class="form-control me-2" name="city_name" type="search" placeholder="Введите город" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Поиск</button>
                 </form>
               </div>
         </nav>
 
+        {% block content %}
+        {% endblock %}
 
-
-
-    <script src="{% static 'js/vue.js' %}"></script>
     <script src="{% static 'js/jquery-3.6.3.js' %}"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/meteo.js' %}"></script>

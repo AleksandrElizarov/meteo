@@ -5,7 +5,11 @@ body{
     background-color: #3598c5 !important;
 }
 .navbar-brand{
-    color: #fc6100 !important;
+    color: #a611b7 !important;
     font-size: xx-large !important;
     font-weight: bold;
+}
+
+#text_resp_fail{
+    color: #cbb94a !important;
 }
