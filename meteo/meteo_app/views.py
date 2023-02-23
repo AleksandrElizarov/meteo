@@ -5,6 +5,7 @@ import datetime
 from meteo.settings import settings
 
 url_find_current_weather_by_city_name = "http://api.openweathermap.org/data/2.5/find"  # Адрес для запроса погоды по городу
+url_icon_weather = "http://openweathermap.org/img/wn/"
 url_find_5days_weather_by_city_id = "http://api.openweathermap.org/data/2.5/forecast"
 months_dict = {
     "January": "января",
@@ -50,10 +51,18 @@ def view_meteo_page(request):
         first_day = obj_first_day_date_str.strftime('%d')
         formatted_first_month = obj_first_day_date_str.strftime('%B')
         first_month = months_dict[formatted_first_month]
-        dict_weather_data_5days = {'city_name': city_name,
+        dict_weather_data_5days = {'city_name': query_city.capitalize(),
+                                   'cur_icon': f"{url_icon_weather}{data_list_current_weather['list'][0]['weather'][0]['icon']}@2x.png",
+                                   'cur_description': data_list_current_weather['list'][0]['weather'][0]['description'],
+                                   'cur_temperature': data_list_current_weather['list'][0]['main']['temp'],
+                                   'cur_pressure': data_list_current_weather['list'][0]['main']['pressure'],
+                                   'cur_humidity': data_list_current_weather['list'][0]['main']['humidity'],
+                                   'cur_wind_speed': data_list_current_weather['list'][0]['wind']['speed'],
+                                   'cur_wind_deg': data_list_current_weather['list'][0]['wind']['deg'],
+
                                    'first_day': first_day,
                                    'first_month': first_month}
-
+        print(len(data_list_5days_weather['list']))
         return render(request, 'meteo_success.html', context=dict_weather_data_5days)
 
     except Exception as e:

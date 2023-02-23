@@ -6,11 +6,11 @@ body{
 }
 .navbar-brand{
     color: #a611b7 !important;
-    font-size: xx-large !important;
     font-weight: bold;
 }
+
 .card-title{
-    font-family: "Wide Latin"!important;
+    font-family: "Segoe Print"!important;
     color: #5ad928!important;
 }
 .card-text{

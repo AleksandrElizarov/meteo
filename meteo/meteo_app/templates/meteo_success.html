@@ -2,41 +2,29 @@
 
 {% block content %}
 <div class="card border-primary">
-  <div class="row g-0">
-    <div class="col-md-4">
+  <div class="row">
+    <div class="col-md-2">
       <div class="card-body">
-        <h1 class="card-title">{{city_name}}</h1>
-        <h1 class="card-text">{{first_day}}</h1>
-        <h1 class="card-text">{{first_month}}</h1>
+        <h2 class="card-title text-center" >{{city_name}}</h2>
       </div>
     </div>
-    <div class="col-md-8">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Header 1</th>
-            <th scope="col">Header 2</th>
-            <th scope="col">Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-          </tr>
-          <tr>
-            <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
-          </tr>
-          <tr>
-            <td>Data 7</td>
-            <td>Data 8</td>
-            <td>Data 9</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="col-md-4">
+      <div class="card-body">
+        <img  src="{{cur_icon}}">
+        <h2 class="card-text">{{cur_description}}</h2>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h3 class="card-text">Температура: {{cur_temperature}}°</h3>
+        <h3 class="card-text">Давление: {{cur_pressure}}мм.рт.ст.</h3>
+        <h3 class="card-text">Влажность: {{cur_humidity}}%</h3>
+        <h3 class="card-text">Скорость ветра: {{cur_wind_speed}}м/с</h3>
+        <h3 class="card-text">Направление ветра: {{cur_wind_deg}}°</h3>
+      </div>
+    </div>
+
+
     </div>
   </div>
 </div>
