@@ -1,9 +1,43 @@
 {% extends 'meteo_main.html' %}
 
 {% block content %}
-    <div class="container-fluid">
-        <h2>
-            Успешно
-        </h2>
+<div class="card border-primary">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <div class="card-body">
+        <h1 class="card-title">{{city_name}}</h1>
+        <h1 class="card-text">{{first_day}}</h1>
+        <h1 class="card-text">{{first_month}}</h1>
+      </div>
     </div>
+    <div class="col-md-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Header 1</th>
+            <th scope="col">Header 2</th>
+            <th scope="col">Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+          </tr>
+          <tr>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 {% endblock %}

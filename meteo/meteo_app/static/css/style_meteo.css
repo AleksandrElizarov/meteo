@@ -9,6 +9,18 @@ body{
     font-size: xx-large !important;
     font-weight: bold;
 }
+.card-title{
+    font-family: "Wide Latin"!important;
+    color: #5ad928!important;
+}
+.card-text{
+    font-family: Mistral!important;
+    color: #0a406b !important;
+}
+
+
+
+
 
 #text_resp_fail{
     color: #cbb94a !important;
