@@ -2,20 +2,51 @@ body{
     background-color: #e3f2fd!important;
 }
 .navbar{
-    background-color: #3598c5 !important;
+    background-color: #51b4e2 !important;
 }
 .navbar-brand{
-    color: #a611b7 !important;
+    color: #f02569 !important;
     font-weight: bold;
+}
+.card{
+    background-color: rgb(197, 230, 236)!important;
+}
+.card-img{
+    max-width: 45%;
+    max-height: 45%;
+}
+.row_card_current_weather{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
 }
 
 .card-title{
     font-family: "Segoe Print"!important;
-    color: #5ad928!important;
+    font-size: 62px;
+    font-weight: bold;
+    color: #3245e7!important;
 }
 .card-text{
-    font-family: Mistral!important;
-    color: #0a406b !important;
+    font-family: "Segoe Print"!important;
+    font-size: xx-large;
+    color: #66696b !important;
+}
+.content_param{
+    display: inline-block;
+}
+.content_param_desc{
+    font-size: xx-large;
+    text-decoration: underline;
+    font-family: Mistral;
+    color: #0a406b;
+}
+.content_param_value{
+    font-size: x-large;
+    
+    font-family: 'Times New Roman';
+    color: #242627;
 }
 
 
