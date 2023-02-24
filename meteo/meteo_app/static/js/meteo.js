@@ -6,17 +6,17 @@ set_color_element_by_id(ElementById='temperature',
                         arr_limits=limits_temperature, 
                         arr_color_cat=custom_color_categories)
 
-var limits_pressure = [900, 950, 1000, 1020, 1040]; 
+var limits_pressure = [900, 950, 1000, 1020]; 
 set_color_element_by_id(ElementById='pressure', 
                         arr_limits=limits_pressure, 
                         arr_color_cat=custom_color_categories) 
                         
-var limits_humidity = [10, 25, 40, 65, 85]; 
+var limits_humidity = [10, 25, 40, 65]; 
 set_color_element_by_id(ElementById='humidity', 
                         arr_limits=limits_humidity, 
                         arr_color_cat=custom_color_categories) 
                         
-var limits_wind_speed = [0, 5, 10, 15, 20];
+var limits_wind_speed = [0, 5, 10, 20];
 set_color_element_by_id(ElementById='wind_speed', 
                         arr_limits=limits_wind_speed, 
                         arr_color_cat=custom_color_categories)                         
@@ -38,7 +38,7 @@ function set_color_element_by_id(ElementById, arr_limits, arr_color_cat){
         element_id.style.backgroundColor = arr_color_cat[2];    
     } else if((element_text >= arr_limits[2]) && (element_text < arr_limits[3])){
         element_id.style.backgroundColor = arr_color_cat[3];    
-    } else if(element_text > arr_limits[4]){
+    } else if(element_text > arr_limits[3]){
         element_id.style.backgroundColor = arr_color_cat[4];    
     }
 }
