@@ -2,6 +2,7 @@ body{
     background-color: #e3f2fd!important;
 }
 .navbar{
+    width: 100%;
     background-color: #51b4e2 !important;
 }
 .navbar-brand{
@@ -9,11 +10,14 @@ body{
     font-weight: bold;
 }
 .card{
-    background-color: rgb(197, 230, 236)!important;
+    background-color: #e3f2fd!important;
 }
 .card-img{
     max-width: 45%;
     max-height: 45%;
+}
+.row{
+    width: 100%!important;
 }
 .row_card_current_weather{
     display: flex; 
@@ -48,10 +52,17 @@ body{
     color: #242627;
 }
 
-
-
-
-
 #text_resp_fail{
     color: #cbb94a !important;
 }
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   background-color: #e3f2fd!important;
+    color: #333;
+    text-align: center;
+  }
+  
