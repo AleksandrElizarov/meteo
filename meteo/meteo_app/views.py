@@ -1,7 +1,6 @@
 from django.shortcuts import render
 import requests
 from loguru import logger
-import datetime
 from meteo.settings import settings
 
 url_find_current_weather_by_city_name = "http://api.openweathermap.org/data/2.5/find"  # Адрес для запроса погоды по городу
@@ -46,23 +45,16 @@ def view_meteo_page(request):
         data_list_5days_weather = res_data_5days.json()
         logger.info(f"Response meteo data 5 days: {data_list_5days_weather}")
 
-        first_day_date_str = data_list_5days_weather['list'][0]['dt_txt']
-        obj_first_day_date_str = datetime.datetime.strptime(first_day_date_str, '%Y-%m-%d %H:%M:%S')
-        first_day = obj_first_day_date_str.strftime('%d')
-        formatted_first_month = obj_first_day_date_str.strftime('%B')
-        first_month = months_dict[formatted_first_month]
+        print(f"img/{data_list_current_weather['list'][0]['weather'][0]['icon']}.jpg")
         dict_weather_data_5days = {'city_name': query_city.capitalize(),
-                                   'cur_icon': f"{url_icon_weather}{data_list_current_weather['list'][0]['weather'][0]['icon']}@2x.png",
+                                   'cur_icon': f"img/{data_list_current_weather['list'][0]['weather'][0]['icon']}.jpg",
                                    'cur_description': data_list_current_weather['list'][0]['weather'][0]['description'],
                                    'cur_temperature': data_list_current_weather['list'][0]['main']['temp'],
                                    'cur_pressure': data_list_current_weather['list'][0]['main']['pressure'],
                                    'cur_humidity': data_list_current_weather['list'][0]['main']['humidity'],
                                    'cur_wind_speed': data_list_current_weather['list'][0]['wind']['speed'],
                                    'cur_wind_deg': data_list_current_weather['list'][0]['wind']['deg'],
-
-                                   'first_day': first_day,
-                                   'first_month': first_month}
-        print(len(data_list_5days_weather['list']))
+                                   }
         return render(request, 'meteo_success.html', context=dict_weather_data_5days)
 
     except Exception as e:

@@ -3,18 +3,18 @@ body{
 }
 .navbar{
     width: 100%;
-    background-color: #51b4e2 !important;
+    background-color: #91b2c2 !important;
 }
 .navbar-brand{
-    color: #f02569 !important;
+    font-family: "Segoe Print";
+    color: #1d2044 !important;
     font-weight: bold;
 }
 .card{
     background-color: #e3f2fd!important;
 }
 .card-img{
-    max-width: 45%;
-    max-height: 45%;
+    border-radius: 50% !important;
 }
 .row{
     width: 100%!important;
@@ -48,6 +48,7 @@ body{
 }
 .content_param_value{
     font-size: x-large;
+    font-weight: bold!important;
     font-family: 'Times New Roman';
     color: #242627;
 }
