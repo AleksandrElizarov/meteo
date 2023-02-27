@@ -4,27 +4,13 @@ from loguru import logger
 from meteo.settings import settings
 
 url_find_current_weather_by_city_name = "http://api.openweathermap.org/data/2.5/find"  # Адрес для запроса погоды по городу
-url_icon_weather = "http://openweathermap.org/img/wn/"
 url_find_5days_weather_by_city_id = "http://api.openweathermap.org/data/2.5/forecast"
-months_dict = {
-    "January": "января",
-    "February": "февраля",
-    "March": "марта",
-    "April": "апреля",
-    "May": "мая",
-    "June": "июня",
-    "July": "июля",
-    "August": "августа",
-    "September": "сентября",
-    "October": "октября",
-    "November": "ноября",
-    "December": "декабря"
-}
 
 
 def view_meteo_page(request):
     if request.GET.get('city_name'):
-        query_city = request.GET.get('city_name')
+        query_city:str = request.GET.get('city_name')
+        query_city = query_city.split(' ')[0] #Принимаем только название города(отсекаем пробел)
         logger.info(f"Request weather by city name: {query_city}")
     else:
         query_city = 'Бишкек'
