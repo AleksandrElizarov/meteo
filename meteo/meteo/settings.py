@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-bu@*#3s(d-lf5!vcg6p8wu$yzco=xw=&n6+^9wb$rqmak4nlb)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'meteo-d0ej.onrender.com',]
 
 # Application definition
 
